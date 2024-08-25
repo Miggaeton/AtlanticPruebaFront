@@ -1,0 +1,77 @@
+<h1 mat-dialog-title>{{tituloAccion}} asegurado</h1>
+<div mat-dialog-content>
+    <form [formGroup]="formInsured">
+        <mat-grid-list cols="1" rowHeight="70px">
+            <mat-grid-tile>
+                <mat-form-field appearance="fill">
+                    <mat-label>Identificación</mat-label>
+                    <input matInput type="number" formControlName="id" autocomplete="off">
+                  </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field appearance="fill">
+                    <mat-label>Primer nombre</mat-label>
+                    <input matInput formControlName="firstName" autocomplete="off">
+                  </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field appearance="fill">
+                    <mat-label>Segundo nombre</mat-label>
+                    <input matInput formControlName="secondName" autocomplete="off">
+                  </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field appearance="fill">
+                    <mat-label>Primer apellido</mat-label>
+                    <input matInput formControlName="firstLastName" autocomplete="off">
+                  </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field appearance="fill">
+                    <mat-label>Segundo apellido</mat-label>
+                    <input matInput formControlName="secondLastName" autocomplete="off">
+                  </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field appearance="fill">
+                    <mat-label>Correo electrónico</mat-label>
+                    <input matInput formControlName="email" type="email" autocomplete="off">
+                  </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field appearance="fill">
+                    <mat-label>Teléfono</mat-label>
+                    <input matInput type="number" formControlName="phone" autocomplete="off">
+                  </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field>
+                    <mat-label>Fecha de nacimiento</mat-label>
+                    <input matInput [matDatepicker]="picker" formControlName="birthDate">
+                    <mat-hint>DD/MM/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field appearance="fill">
+                    <mat-label>Valor estimado de solicitud de seguro</mat-label>
+                    <input matInput type="number" formControlName="value" autocomplete="off">
+                  </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field appearance="fill">
+                    <mat-label>Observaciones</mat-label>
+                    <textarea matInput formControlName="observations" autocomplete="off"></textarea>
+                  </mat-form-field>
+            </mat-grid-tile>
+          </mat-grid-list>
+    </form>
+</div>
+
+<div mat-dialog-actions>
+    <button mat-raised-button mat-dialog-close color="warn">Volver</button>
+    <button mat-raised-button mat-dialog-close color="primary"
+    (click)="addEditInsured()" [disabled]="formInsured.invalid"
+    >{{botonAccion}}</button>
+</div>
