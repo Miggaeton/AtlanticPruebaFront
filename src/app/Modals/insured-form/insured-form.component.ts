@@ -45,6 +45,7 @@ export class InsuredFormComponent {
       observations: ['']
     })
 
+
     this._insuredService.getInsured().subscribe({
       next:(data) => {
         this.listInsured = data;
@@ -73,7 +74,7 @@ export class InsuredFormComponent {
       phone: (this.formInsured.value.phone).toString(),
       birthDate: Dayjs(this.formInsured.value.birthDate).format("YYYY-MM-DD"),
       value: this.formInsured.value.value,
-      observations: this.formInsured.value.obervations
+      observations: this.formInsured.value.observations
     }
 
     if (this._insuredEdit) {
@@ -99,9 +100,6 @@ export class InsuredFormComponent {
     }
   }
 
-  deleteInsured(){
-    
-  }
 
   ngOnInit(): void {
     
@@ -122,5 +120,7 @@ export class InsuredFormComponent {
       this.tituloAccion  = "Editar"
       this.botonAccion = "Actualizar"
     }
+
+    this.dialogReference.updateSize('60%', '90%')
   }
 }
