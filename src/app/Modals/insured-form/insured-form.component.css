@@ -1,0 +1,15 @@
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+.width-form {
+    min-width: 550px;
+    max-width: 1000px;
+    width: 100%;
+  }
+
+  .example-full-width {
+    width: 100%;
+    
+  }

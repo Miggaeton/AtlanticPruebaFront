@@ -6,3 +6,18 @@ table {
     font-size: 12px;
     width: 100%;
 }
+
+.container {
+  display: flex;
+  gap: 10px;
+}
+
+.button {
+  /*width: 100%;*/
+  min-height: 57px;
+}
+
+.mat-success {
+  background-color: green;
+  color: #fff;
+}

@@ -16,8 +16,8 @@ export class InsuredService {
   constructor(private http:HttpClient) { }
 
   getInsured(id?:number):Observable<Insured[]>{
-    return id ? this.http.get<Insured[]>(`${this.apiURL}GetAllInsured/?id=${id}`) 
-              : this.http.get<Insured[]>(`${this.apiURL}GetAllInsured/`);
+    return id ? this.http.get<Insured[]>(`${this.apiURL}GetInsured/?id=${id}`) 
+              : this.http.get<Insured[]>(`${this.apiURL}GetInsured/`);
   }
 
   addInsured(insured: Insured):Observable<Insured>{

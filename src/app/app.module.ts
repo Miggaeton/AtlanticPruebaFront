@@ -16,9 +16,9 @@ import { TableComponentComponent } from './table-component/table-component.compo
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { provideAnimations } from '@angular/platform-browser/animations';
-import { InsuredFormComponent } from './InsuredForm/insured-form/insured-form.component';
+import { InsuredFormComponent } from './Modals/insured-form/insured-form.component';
 import { MatDialogModule } from '@angular/material/dialog';
-import { DeleteDialogComponent } from './InsuredForm/delete-dialog/delete-dialog.component';
+import { DeleteDialogComponent } from './Modals/delete-dialog/delete-dialog.component';
 
 @NgModule({
   declarations: [
